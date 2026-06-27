@@ -1,6 +1,10 @@
+import streamlit as st
 import math
-sqrt =  math.sqrt
-x=int(input('enter the number here:'))
-y=sqrt(x)
-print(y)
-input("press enter to exit")
+
+st.title("Square Root Calculator")
+
+x = st.number_input("Enter a number", min_value=0)
+
+if st.button("Calculate"):
+    y = math.sqrt(x)
+    st.write("Square root =", y)
